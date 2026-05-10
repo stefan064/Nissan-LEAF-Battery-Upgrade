@@ -428,8 +428,6 @@ CQ_STATUS PushCan( uint8_t canNum, uint8_t TxRx, CAN_FRAME *frame )
         canHead[ TxRx ][ canNum ] = ( canHead[ TxRx ][ canNum ] + 1 ) % CAN_QUEUE;        
         retVal = CQ_OK;
     }
-    
-    sendCan( canNum );
    
     return retVal;
 }
